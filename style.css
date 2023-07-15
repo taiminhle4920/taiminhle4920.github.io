@@ -1,0 +1,226 @@
+/* CSS general */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a{
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: #0b141e;
+    color: #fff;
+}
+
+/* Header Section */
+.header{
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo{
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: aqua;
+}
+
+.menu-bar a{
+    font-size: 1.5rem;
+    margin-left: 3.5rem;
+    transition: 0.4s ease;
+}
+
+.menu-bar a:hover{
+    color: aqua;
+}
+
+.menu-btn{
+    font-size: 3rem;
+    display: none;
+}
+
+section{
+    padding: 10rem 10%;
+    min-height: 100vh;
+}
+
+/* Home Section */
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-bio h3{
+    font-size: 2.5rem;
+}
+
+span{
+    color: aqua;
+}
+
+.home-bio h1{
+    font-size: 3.5rem;
+    line-height: 1.4;
+}
+
+.home-bio p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.profile-pic img{
+    width: 30vw;
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.social-media a{
+    width: 3.8rem;
+    height: 3.8rem;
+    font-size: 2.2rem;
+    margin: 1rem 1rem 2rem 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+.social-media a:hover{
+    color: aqua;
+    box-shadow: 0 0 1rem aqua;
+
+}
+
+.btn{
+    display: inline-block;
+    background: aqua;
+    margin: 2rem 0;
+    padding: 1rem 2.5rem;
+    border-radius: 1.3rem;
+    font-size: 1.3rem;
+    color: #000;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+.btn:hover{
+    color: aqua;
+    background: #000;
+    box-shadow: 0 0 1rem aqua;
+}
+
+/* About Section */
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading{
+    font-size: 3.3rem;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.about-items{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+
+.about-resume h3{
+    font-size: 2.4rem;
+}
+
+.about-text p{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+
+/* Skills Section */
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skills-items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem
+}
+
+.skills-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165,1);
+}
+
+.skills-cards:hover{
+    border-radius: 1rem solid;
+    transform: scale(1.05);
+}
+
+.skills-cards .bx{
+    font-size: 8rem;
+}
+
+.skills-cards .bx:hover{
+    color: aqua;
+    transition: 0.4s ease;
+}
+
+.skills-cards h3{
+    font-size: 2.5rem;
+    font-weight: 200;   
+}
+
+.skills-cardsp{
+    text-align: center;
+    font-size: 1.3rem;
+    opacity: 0.5;
+}
