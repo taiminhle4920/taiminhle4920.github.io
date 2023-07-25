@@ -221,7 +221,7 @@ span{
     font-weight: 200;   
 }
 
-.skills-cardsp{
+.skills-card{
     text-align: center;
     font-size: 1.3rem;
     opacity: 0.5;
@@ -238,11 +238,11 @@ span{
 
 .projects-items{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 4rem;
 }
 
-.projects-card{
+.project-card{
     position: relative;
     height: 25rem;
     width: 100%;
@@ -250,15 +250,21 @@ span{
     overflow: hidden;
 }
 
-.projects-card img{
-    height: 100%;
+.project-card img{
+    height: 90%;
     width: 100%;
     object-fit: cover;
     object-position: center;
 }
-/* 
+ 
+.project-card h3{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
 .card-overlay{
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0);
     position: absolute;
     left: 0;
     top: 0;
@@ -272,18 +278,19 @@ span{
 }
 
 .card-overlay:hover{
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.9);
     color: #000;
     transition: 0.4s all linear;
 }
 
 .card-overlay .bx{
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 1.1rem;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0);
     border-radius: 0.8rem;
     transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+
 }
 
 .card-overlay .bx:hover{
@@ -291,4 +298,46 @@ span{
     color: aqua;
     background: #000;
     box-shadow: 0 0 2rem aqua;
-}  */
+}  
+
+/* Contact Section */
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    display: grid;
+    row-gap: 1rem;
+}
+
+form input,
+textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    resize: none;
+}
+
+/* Footer Section */
+
+.footer{
+    padding: 2rem 10%;
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+hr{
+    margin: 1rem;
+    border-bottom: thin darkcyan solid;
+}
+
+
+/*Responsive Section */
