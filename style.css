@@ -63,11 +63,11 @@ body{
 
 section{
     padding: 10rem 10%;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
-/* Home Section */
 
+/* Home Section */
 .home{
     display: flex;
     align-items: center;
@@ -75,7 +75,7 @@ section{
 }
 
 .home-bio h3{
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 span{
@@ -83,19 +83,19 @@ span{
 }
 
 .home-bio h1{
-    font-size: 3.5rem;
+    font-size: 4rem;
     line-height: 1.4;
 }
 
 .home-bio p{
     font-size: 1.5rem;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .profile-pic img{
-    width: 25vw;
+    width: 15vw;
     border-radius: 50%;
-    animation: float 5s ease-in-out infinite;
+    animation: float 7s ease-in-out infinite;
 }
 
 @keyframes float{
@@ -131,13 +131,15 @@ span{
 .btn{
     display: inline-block;
     background: aqua;
-    margin: 2rem 0;
+    margin: 2rem 0.5rem;
     padding: 1rem 2.5rem;
     border-radius: 1.3rem;
     font-size: 1.3rem;
     color: #000;
     font-weight: 600;
     transition: 0.5s ease;
+    align-items: center;
+    
 }
 
 .btn:hover{
@@ -146,36 +148,11 @@ span{
     box-shadow: 0 0 1rem aqua;
 }
 
-/* About Section */
-.about{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 
- .heading{
+.heading{
     font-size: 3.3rem;
     text-align: center;
-    margin: 4rem 0;
-}
-
-.about-items{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    gap: 3rem;
-    
-}
-
-
-.about-resume h3{
-    font-size: 2.4rem;
-}
-
-.about-text p{
-    font-size: 1.8rem;
+    margin: 3rem 0;
 }
 
 
@@ -190,41 +167,45 @@ span{
 .skills-items{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 3rem
+    gap: 4rem 10rem;
+
 }
 
-.skills-cards{
+.skill-card{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
     transition: 1s all cubic-bezier(0.075, 0.82, 0.165,1);
+    color: rgba(255, 255, 255, 1);
+
 }
 
-.skills-cards:hover{
+.skill-card:hover{
     border-radius: 1rem solid;
     transform: scale(1.05);
 }
 
-.skills-cards .bx{
+.skill-card .bx{
     font-size: 8rem;
 }
 
-.skills-cards .bx:hover{
+.skill-card .bx:hover{
     color: aqua;
     transition: 0.4s ease;
 }
 
-.skills-cards h3{
-    font-size: 2.5rem;
+.skill-card h3{
+    font-size: 2rem;
     font-weight: 200;   
 }
 
-.skills-card{
+.skill-card p{
     text-align: center;
     font-size: 1.3rem;
     opacity: 0.5;
+
 }
 
 
@@ -236,10 +217,10 @@ span{
     flex-direction: column;
 }
 
-.projects-items{
+.project-items{
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
 }
 
 .project-card{
@@ -247,20 +228,28 @@ span{
     height: 25rem;
     width: 100%;
     border-radius: 10px;
-    overflow: hidden;
 }
 
 .project-card img{
-    height: 90%;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 20px;
+
 }
  
 .project-card h3{
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
+}
+
+.project-card a{
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
 }
 
 .card-overlay{
@@ -274,17 +263,19 @@ span{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    cursor: pointer; 
+    cursor: pointer;
+    
 }
 
 .card-overlay:hover{
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     color: #000;
     transition: 0.4s all linear;
 }
 
 .card-overlay .bx{
     color: #fff;
+    
     font-size: 1.5rem;
     padding: 1.1rem;
     background: rgba(0, 0, 0, 0);
@@ -298,6 +289,8 @@ span{
     color: aqua;
     background: #000;
     box-shadow: 0 0 2rem aqua;
+    display: flex;
+    
 }  
 
 /* Contact Section */
@@ -316,11 +309,11 @@ form{
 
 form input,
 textarea{
-    width: 100%;
+    width: 400px;
     padding: 1rem;
     font-size: 1.5rem;
     color: #fff;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 1rem;
     resize: none;
 }
@@ -341,3 +334,76 @@ hr{
 
 
 /*Responsive Section */
+@media (max-width: 1200px) {
+    html{
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 992px) {
+    .header{
+        padding: 2rem 4%;
+    }
+    .home img{
+        width: 40vw;
+    }
+}
+
+@media (max-width: 767px) {
+    #menu-btn{
+        display: block;
+    }
+    .menu-bar{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+    }
+    .menu-bar.active{
+        display: block;
+        
+    }
+    .menu-bar a{
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+        text-align: right;
+    }
+
+    .home{
+        flex-direction: column;
+    }
+    .home img{
+        width: 70vw;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+
+    .skills-items{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 620px) {
+    .skills-items{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .project-items{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .heading{
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html{
+        font-size: 50%;
+    }
+}
+
