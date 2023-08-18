@@ -42,7 +42,7 @@ body{
 .logo{
     font-size: 2.2rem;
     font-weight: 600;
-    color: aqua;
+    color: rgba(77, 255, 187);
 }
 
 .menu-bar a{
@@ -53,7 +53,7 @@ body{
 
 
 .menu-bar a:hover{
-    color: aqua;
+    color: rgba(77, 255, 187);
 }
 
 #menu-btn{
@@ -79,7 +79,7 @@ section{
 }
 
 span{
-    color: aqua;
+    color: rgba(77, 255, 187);
 }
 
 .home-bio h1{
@@ -123,14 +123,14 @@ span{
 }
 
 .social-media a:hover{
-    color: aqua;
-    box-shadow: 0 0 1rem aqua;
+    color: rgba(77, 255, 187);
+    box-shadow: 0 0 1rem rgba(77, 255, 187);
 
 }
 
 .btn{
     display: inline-block;
-    background: aqua;
+    background: rgba(77, 255, 187);
     margin: 2rem 0.5rem;
     padding: 1rem 2.5rem;
     border-radius: 1.3rem;
@@ -143,9 +143,9 @@ span{
 }
 
 .btn:hover{
-    color: aqua;
+    color: rgba(77, 255, 187);
     background: #000;
-    box-shadow: 0 0 1rem aqua;
+    box-shadow: 0 0 1rem rgba(77, 255, 187);
 }
 
 
@@ -192,7 +192,7 @@ span{
 }
 
 .skill-card .bx:hover{
-    color: aqua;
+    color: rgba(77, 255, 187);
     transition: 0.4s ease;
 }
 
@@ -286,9 +286,9 @@ span{
 
 .card-overlay .bx:hover{
     transform: scale(1.2);
-    color: aqua;
+    color: rgba(77, 255, 187);
     background: #000;
-    box-shadow: 0 0 2rem aqua;
+    box-shadow: 0 0 2rem rgba(77, 255, 187);
     display: flex;
     
 }  
