@@ -96,6 +96,8 @@ span{
     width: 15vw;
     border-radius: 50%;
     animation: float 7s ease-in-out infinite;
+    box-shadow: 0 0 3rem turquoise;
+    margin-left: 3rem;
 }
 
 @keyframes float{
@@ -103,7 +105,7 @@ span{
         transform: translateY(0);
     }
     50%{
-        transform: translateY(-5rem);
+        transform: translateY(-3rem);
     }
     100%{
         transform: translateY(0);
@@ -275,7 +277,6 @@ span{
 
 .card-overlay .bx{
     color: #fff;
-    
     font-size: 1.5rem;
     padding: 1.1rem;
     background: rgba(0, 0, 0, 0);
@@ -329,7 +330,7 @@ textarea{
 
 hr{
     margin: 1rem;
-    border-bottom: thin darkcyan solid;
+    border-bottom: thin darkturquoise solid;
 }
 
 
@@ -345,7 +346,8 @@ hr{
         padding: 2rem 4%;
     }
     .home img{
-        width: 40vw;
+        width: 30vw;
+        margin-top: 5rem;
     }
 }
 
@@ -376,7 +378,7 @@ hr{
         flex-direction: column;
     }
     .home img{
-        width: 70vw;
+        width: 40vw;
     }
     .heading{
         font-size: 3rem;
