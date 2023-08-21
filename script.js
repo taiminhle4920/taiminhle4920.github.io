@@ -27,9 +27,8 @@ ScrollReveal().reveal('.profile-pic, .skills-items, .project-items, .form', {ori
 
 // Typing Animation //
 const animatedText = new Typed('.animated-text', {
-    strings: ['Back-End Developer', 'Front-End Developer', "Fullstack Developer"],
+    strings: ["Fullstack Developer"],
     backSpeed: 50,
     typeSpeed:50,
-    backDelay: 600,
-    loop: true
+    backDelay: 600
 });
