@@ -94,9 +94,10 @@ span{
 
 .profile-pic img{
     width: 15vw;
-    border-radius: 50%;
+    border-radius: 70%;
     animation: float 7s ease-in-out infinite;
-    box-shadow: 0 0 3rem turquoise;
+    box-shadow: 0 0 5rem rgba(77, 255, 187);
+
     margin-left: 3rem;
 }
 
