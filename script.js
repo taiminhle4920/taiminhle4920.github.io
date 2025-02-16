@@ -1,3 +1,6 @@
+document.getElementById('year').textContent = new Date().getFullYear();
+
+
 // Activate Menu Button //
 let menuBtn = document.querySelector('#menu-btn');
 let menuBar = document.querySelector('.menu-bar');
@@ -27,7 +30,7 @@ ScrollReveal().reveal('.profile-pic, .skills-items, .project-items, .form', {ori
 
 // Typing Animation //
 const animatedText = new Typed('.animated-text', {
-    strings: ["Fullstack Developer"],
+    strings: ["Full-stack Software Engineer", "Machine Learning Engineer"],
     backSpeed: 50,
     typeSpeed:50,
     backDelay: 600
