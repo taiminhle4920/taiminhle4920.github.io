@@ -1,6 +1,7 @@
 /* CSS general */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*{
+
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -11,24 +12,33 @@
     scroll-behavior: smooth;
 }
 
-a{
+a {
     color: #fff;
 }
 
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
 
-body{
-    background: #0b141e;
-    color: #fff;
+
+:root {
+    --primary-color: #64ffda;
+    --bg-color: #1a1a1a;
+    --secondary-bg: #2d2d2d;
+    --text-color: #e6e6e6;
+    --secondary-text: #b3b3b3;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 /* Header Section */
-.header{
-    background: rgba(11, 20, 30, 0.95);
-    backdrop-filter: blur(10px);
+.header {
+    background: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(12px);
     position: fixed;
     top: 0;
     left: 0;
@@ -38,18 +48,18 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 1;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
-.logo{
+.logo {
     font-size: 2.4rem;
     font-weight: 600;
-    color: rgba(77, 255, 187);
-    text-shadow: 0 0 10px rgba(77, 255, 187, 0.3);
+    color: var(--primary-color);
+    text-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
 }
 
-.menu-bar a{
+.menu-bar a {
     font-size: 1.6rem;
     margin-left: 3.5rem;
     transition: 0.3s ease;
@@ -71,22 +81,22 @@ body{
     width: 100%;
 }
 
-.menu-bar a:hover{
+.menu-bar a:hover {
     color: rgba(77, 255, 187);
 }
 
-#menu-btn{
+#menu-btn {
     font-size: 3rem;
     display: none;
 }
 
-section{
+section {
     padding: 12rem 15%;
     min-height: 20vh;
 }
 
 /* Home Section */
-.home{
+.home {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,16 +109,16 @@ section{
     max-width: 60rem;
 }
 
-.home-bio h3{
+.home-bio h3 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-span{
+span {
     color: rgba(77, 255, 187);
 }
 
-.home-bio h1{
+.home-bio h1 {
     font-size: 5rem;
     line-height: 1.2;
     margin-bottom: 2rem;
@@ -117,10 +127,10 @@ span{
     -webkit-text-fill-color: transparent;
 }
 
-.home-bio p{
+.home-bio p {
     font-size: 1.6rem;
     line-height: 1.6;
-    color: #a4b5cd;
+    color: var(--secondary-text);
     margin-bottom: 3rem;
 }
 
@@ -141,19 +151,19 @@ span{
     z-index: -1;
 }
 
-.profile-pic img{
+.profile-pic img {
     width: 28rem;
     border-radius: 50%;
     animation: float 6s ease-in-out infinite;
     box-shadow: 0 0 3rem rgba(77, 255, 187, 0.3);
     transition: transform 0.3s ease;
+    border: 3px solid var(--primary-color);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.profile-pic img:hover {
-    transform: scale(1.05);
-}
 
-.social-media a{
+
+.social-media a {
     width: 3.8rem;
     height: 3.8rem;
     font-size: 2.2rem;
@@ -163,33 +173,55 @@ span{
     justify-content: center;
     border-radius: 50%;
     transition: 0.4s ease;
+    border: 2px solid var(--secondary-text);
 }
 
-.social-media a:hover{
+.social-media a:hover {
     color: rgba(77, 255, 187);
     box-shadow: 0 0 1rem rgba(77, 255, 187);
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
 }
 
-.btn{
+.btn {
     display: inline-block;
-    background: rgba(77, 255, 187);
+    background: transparent;
     margin: 2rem 0.5rem;
     padding: 1rem 2.5rem;
     border-radius: 1.3rem;
     font-size: 1.3rem;
-    color: #000;
+    color: var(--primary-color);
     font-weight: 600;
     transition: 0.5s ease;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid var(--primary-color);
 }
 
-.btn:hover{
-    color: rgba(77, 255, 187);
-    background: #000;
-    box-shadow: 0 0 1rem rgba(77, 255, 187);
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--primary-color);
+    transition: 0.5s ease;
+    z-index: -1;
 }
 
-.heading{
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn:hover {
+    color: var(--bg-color);
+    background: transparent;
+}
+
+.heading {
     font-size: 3.3rem;
     text-align: center;
     margin: 3rem 0;
@@ -216,8 +248,13 @@ span{
     position: relative;
     padding: 20px 40px;
     margin: 20px 0;
-    border-left: 3px solid rgba(77, 255, 187);
+    border-left: 3px solid var(--primary-color);
     color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(10px);
 }
 
 .timeline-dot {
@@ -231,10 +268,15 @@ span{
 }
 
 .timeline-content {
-    background-color: #1e2a38;
+    background-color: var(--secondary-bg);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(77, 255, 187, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
 }
 
 .timeline-content h1 {
@@ -264,12 +306,14 @@ span{
 }
 
 .project-item {
-    background: #1e2a38;
+    background: var(--secondary-bg);
     padding: 2.5rem;
     border-radius: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .project-item::before {
@@ -285,8 +329,8 @@ span{
 }
 
 .project-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+    transform: translateY(-8px);
 }
 
 .project-item:hover::before {
@@ -303,7 +347,7 @@ span{
 
 .project-description {
     font-size: 1.4rem;
-    color: #a4b5cd;
+    color: var(--secondary-text);
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
@@ -330,13 +374,13 @@ span{
 
 /* Footer Section */
 
-.footer{
+.footer {
     padding: 2rem 10%;
     text-align: center;
     font-size: 1rem;
 }
 
-hr{
+hr {
     margin: 1rem;
     border-bottom: thin darkslategrey solid;
 }
@@ -346,21 +390,21 @@ hr{
     html {
         font-size: 55%;
     }
-    
+
     section {
         padding: 8rem 5%;
     }
-    
+
     .home {
         flex-direction: column-reverse;
         text-align: center;
         gap: 3rem;
     }
-    
+
     .profile-pic img {
         width: 25rem;
     }
-    
+
     .project-list {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
@@ -372,14 +416,14 @@ hr{
         font-size: 2.5rem;
         cursor: pointer;
     }
-    
+
     .menu-bar {
         position: fixed;
         top: 6.5rem;
         right: -100%;
-        width: 80%;
-        height: 100vh;
-        background: rgba(11, 20, 30, 0.95);
+        width: 50%;
+        height: 120vh   ;
+        background: #1a1a1a;
         backdrop-filter: blur(10px);
         display: flex;
         flex-direction: column;
@@ -388,11 +432,11 @@ hr{
         padding-top: 5rem;
         transition: 0.3s ease;
     }
-    
+
     .menu-bar.active {
         right: 0;
     }
-    
+
     .menu-bar a {
         display: block;
         margin: 2rem 0;
@@ -404,12 +448,13 @@ hr{
     html {
         font-size: 50%;
     }
-    
+
     .home-bio h1 {
         font-size: 4rem;
     }
-    
+
     .profile-pic img {
         width: 20rem;
+        
     }
 }

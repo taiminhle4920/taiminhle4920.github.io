@@ -33,5 +33,8 @@ const animatedText = new Typed('.animated-text', {
     strings: ["Full-stack Software Engineer", "Machine Learning Engineer"],
     backSpeed: 50,
     typeSpeed:50,
-    backDelay: 600
+    backDelay: 1000, 
+    loop: true,
+
+
 });
