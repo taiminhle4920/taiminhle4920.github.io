@@ -190,10 +190,115 @@ strong { color: var(--text); }
     min-height: 100svh;
     padding-top: 16rem;
     padding-bottom: 6rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 6rem;
+    align-items: center;
+}
+
+/* Left column stretches across both rows for text content */
+.hero-left {
+    grid-column: 1;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 2.2rem;
+}
+
+/* Right column: photo, aligned to top of text */
+.hero-right {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 0.4rem;
+}
+
+/* Stats span full width below the two columns */
+.stats-row {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+/* Scroll hint spans full width */
+.scroll-hint {
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
+/* ── Profile photo placeholder ──────────────────────────────── */
+.profile-photo-wrap {
+    position: relative;
+    width: 26rem;
+    height: 26rem;
+}
+
+/* Rotating gradient ring */
+.profile-ring {
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        var(--accent) 0%,
+        var(--accent-2) 40%,
+        transparent 60%,
+        var(--accent) 100%
+    );
+    animation: ringRotate 4s linear infinite;
+    z-index: 0;
+}
+
+@keyframes ringRotate {
+    to { transform: rotate(360deg); }
+}
+
+.profile-photo {
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    overflow: hidden;
+    z-index: 1;
+    transition: border-color 0.3s ease;
+}
+
+.profile-photo:hover {
+    border-color: var(--accent-2);
+}
+
+/* When you add a real <img>, it will fill the circle */
+.profile-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Placeholder icon + label (hidden once you add a real img) */
+.profile-photo > i {
+    font-size: 4.8rem;
+    color: var(--accent);
+    opacity: 0.7;
+}
+
+.profile-photo > span {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    font-weight: 500;
+    letter-spacing: 0.04em;
 }
 
 .hero-tag-line {
@@ -340,7 +445,7 @@ strong { color: var(--text); }
     display: flex;
     gap: 1.6rem;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 .stat-card {
@@ -391,7 +496,7 @@ strong { color: var(--text); }
     letter-spacing: 0.08em;
     text-transform: uppercase;
     font-weight: 600;
-    margin-top: auto;
+    margin-top: 2rem;
 }
 
 .scroll-line {
@@ -844,13 +949,47 @@ strong { color: var(--text); }
 }
 
 /* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1080px) {
+    .profile-photo-wrap {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
 @media (max-width: 980px) {
     html { font-size: 58%; }
 
+    /* Stack hero: photo above text on medium screens */
+    .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        justify-items: center;
+    }
+
+    .hero-left {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+    }
+
+    .hero-right {
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 2.4rem;
+    }
+
     .stats-row {
+        grid-column: 1;
+        grid-row: 3;
         flex-direction: row;
         overflow-x: auto;
         padding-bottom: 0.4rem;
+        width: 100%;
+    }
+
+    .scroll-hint {
+        grid-column: 1;
+        grid-row: 4;
     }
 
     .stat-card {
