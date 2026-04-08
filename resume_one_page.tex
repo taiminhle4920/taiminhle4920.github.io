@@ -1,7 +1,7 @@
 %-------------------------
 % One-page Resume (ATS-friendly)
 %------------------------
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -19,21 +19,21 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Margins
-\addtolength{\oddsidemargin}{-0.65in}
-\addtolength{\evensidemargin}{-0.65in}
-\addtolength{\textwidth}{1.30in}
-\addtolength{\topmargin}{-0.70in}
-\addtolength{\textheight}{1.45in}
+% Margins (less compressed, more readable)
+\addtolength{\oddsidemargin}{-0.50in}
+\addtolength{\evensidemargin}{-0.50in}
+\addtolength{\textwidth}{1.00in}
+\addtolength{\topmargin}{-0.50in}
+\addtolength{\textheight}{1.00in}
 
 \urlstyle{same}
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-\setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=2pt, parsep=0pt, partopsep=0pt}
+\setlist[itemize]{leftmargin=*, itemsep=3pt, topsep=3pt, parsep=0pt, partopsep=0pt}
 
 % Sections
-\titleformat{\section}{\vspace{-3pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}{\vspace{-2pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % ATS parseable
 \pdfgentounicode=1
@@ -41,22 +41,22 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{\item\small{#1}}
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{0pt}\item
   \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{\small #3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-6pt}
+  \end{tabular*}\vspace{-2pt}
 }
 \newcommand{\resumeProjectHeading}[2]{
-  \vspace{-2pt}\item
+  \vspace{0pt}\item
   \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \small\textbf{#1} & \small #2 \\
-  \end{tabular*}\vspace{-6pt}
+  \end{tabular*}\vspace{-2pt}
 }
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.10in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
 
 \begin{document}
 
@@ -80,7 +80,6 @@
 \resumeItemListStart
   \resumeItem{Built an internal Python tool to parse part-inspection results, reducing manual QC review time by \textasciitilde60\% for a team of 8 engineers.}
   \resumeItem{Developed SQL-backed data pipelines to unify inspection records, cutting report generation from hours to under 5 minutes.}
-  \resumeItem{Automated recurring data workflows in Python, removing \textasciitilde3 hours of manual work per week across the team.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -89,7 +88,6 @@
 \resumeItemListStart
   \resumeItem{Implemented an agentic vector-store pipeline for a production RAG system, achieving 93\% chunk-level retrieval accuracy with full evaluation coverage.}
   \resumeItem{Designed async processing with ARQ and AWS ECR, increasing file throughput by up to 20x and reducing end-to-end processing latency.}
-  \resumeItem{Improved retrieval quality via prompt engineering and embedding optimization, boosting model estimation accuracy by 10\% and embedding accuracy by 9\%.}
 \resumeItemListEnd
 
 \resumeSubheading
