@@ -10,8 +10,19 @@
     <title>Minh Tai Le | Software Engineer</title>
 </head>
 <body>
-    <header class="header">
-        <a href="#home" class="logo">Minh Tai Le</a>
+
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Animated background blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <header class="header" id="header">
+        <a href="#home" class="logo">
+            <span class="logo-bracket">&lt;</span>Vincent<span class="logo-bracket">/&gt;</span>
+        </a>
         <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation menu">
             <i class="bx bx-menu"></i>
         </button>
@@ -26,188 +37,306 @@
     </header>
 
     <main>
+        <!-- ─── HERO ─── -->
         <section class="hero section" id="home">
-            <div class="hero-content">
-                <p class="eyebrow">San Jose, CA • IT Engineer</p>
-                <h1>Building practical AI and software systems that ship measurable impact.</h1>
-                <p class="hero-summary">
-                    I'm Minh Tai Le (Vincent), a software engineer focused on AI-powered products, backend systems,
-                    and scalable data workflows. I build high-impact tooling that improves speed, quality, and team productivity.
-                </p>
-                <p class="hero-role">Currently: <span class="animated-text">IT Engineer at AIC</span></p>
-                <div class="cta-group">
-                    <a href="assets/Minh_Tai_Le_Resume.pdf" class="btn btn-primary" download>Download Updated Resume</a>
-                    <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+            <div class="hero-tag-line">
+                <span class="tag-dot"></span>
+                Available for opportunities · San Jose, CA
+            </div>
+
+            <h1 class="hero-name">
+                <span class="name-line" data-text="Minh Tai Le">Minh Tai Le</span>
+            </h1>
+
+            <div class="hero-role-wrap">
+                <span class="terminal-prompt">~/vincent $</span>
+                <span class="animated-text"></span>
+                <span class="terminal-cursor">█</span>
+            </div>
+
+            <p class="hero-summary">
+                I design and ship <strong>AI-powered backends</strong>, scalable data pipelines,
+                and developer tooling that turns ambiguous problems into measurable outcomes.
+            </p>
+
+            <div class="cta-group">
+                <a href="assets/Minh_Tai_Le_Resume.pdf" class="btn btn-primary" download>
+                    <i class="bx bx-download"></i> Resume
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="bx bx-send"></i> Let's Talk
+                </a>
+                <a href="https://github.com/taiminhle4920" target="_blank" rel="noreferrer" class="btn btn-ghost" aria-label="GitHub">
+                    <i class="bx bxl-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/vincentle4920/" target="_blank" rel="noreferrer" class="btn btn-ghost" aria-label="LinkedIn">
+                    <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="mailto:vincentle4920@gmail.com" class="btn btn-ghost" aria-label="Email">
+                    <i class="bx bx-envelope"></i>
+                </a>
+            </div>
+
+            <!-- Floating stat cards -->
+            <div class="stats-row">
+                <div class="stat-card tilt-card">
+                    <div class="stat-icon"><i class="bx bx-time-five"></i></div>
+                    <div class="stat-value" data-target="60" data-suffix="%">0%</div>
+                    <div class="stat-label">Less manual QC time</div>
                 </div>
-                <div class="social-media">
-                    <a href="mailto:vincentle4920@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/vincentle4920/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-                    <a href="https://github.com/taiminhle4920" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                <div class="stat-card tilt-card">
+                    <div class="stat-icon"><i class="bx bx-rocket"></i></div>
+                    <div class="stat-value" data-target="20" data-suffix="x">0x</div>
+                    <div class="stat-label">Throughput increase</div>
+                </div>
+                <div class="stat-card tilt-card">
+                    <div class="stat-icon"><i class="bx bx-target-lock"></i></div>
+                    <div class="stat-value" data-target="93" data-suffix="%">0%</div>
+                    <div class="stat-label">RAG retrieval accuracy</div>
                 </div>
             </div>
 
-            <div class="impact-grid">
-                <article class="impact-card">
-                    <h2>~60%</h2>
-                    <p>Reduced manual QC review time by building an internal Python inspection parser.</p>
-                </article>
-                <article class="impact-card">
-                    <h2>20x</h2>
-                    <p>Increased file-processing throughput using async job processing with ARQ and AWS ECR.</p>
-                </article>
-                <article class="impact-card">
-                    <h2>93%</h2>
-                    <p>Chunk-level retrieval accuracy delivered for a production RAG vector-store pipeline.</p>
-                </article>
+            <div class="scroll-hint">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
             </div>
         </section>
 
+        <!-- ─── EXPERIENCE ─── -->
         <section class="section experience" id="experience">
-            <div class="section-heading">
-                <p>Career</p>
+            <div class="section-heading reveal">
+                <p class="eyebrow">Career</p>
                 <h2>Experience</h2>
             </div>
             <div class="timeline">
-                <article class="timeline-item">
-                    <div class="timeline-meta">
-                        <span>Feb 2026 - Present</span>
-                        <h3>IT Engineer • AIC</h3>
+                <article class="timeline-item tilt-card reveal">
+                    <div class="timeline-left">
+                        <div class="timeline-badge"><i class="bx bx-code-alt"></i></div>
+                        <div class="timeline-line"></div>
                     </div>
-                    <ul>
-                        <li>Developed an internal Python tool to parse part-inspection results, reducing manual QC review time by ~60% for 8 engineers.</li>
-                        <li>Built SQL-backed pipelines to consolidate multi-source inspection data, cutting report generation from hours to under 5 minutes.</li>
-                        <li>Automated repetitive Python workflows, removing roughly 3 hours of weekly manual effort across the team.</li>
-                    </ul>
+                    <div class="timeline-body">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Feb 2026 – Present</span>
+                            <span class="timeline-badge-label current">Current</span>
+                        </div>
+                        <h3>IT Engineer <span class="at">@</span> AIC</h3>
+                        <ul>
+                            <li>Developed an internal Python tool to parse part-inspection results, reducing manual QC review time by <strong>~60%</strong> for 8 engineers.</li>
+                            <li>Built SQL-backed pipelines to consolidate multi-source inspection data, cutting report generation from hours to <strong>under 5 minutes</strong>.</li>
+                            <li>Automated repetitive Python workflows, removing roughly <strong>3 hours</strong> of weekly manual effort across the team.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Python</span><span>SQL</span><span>Automation</span>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="timeline-item">
-                    <div class="timeline-meta">
-                        <span>Jul 2025 - Jan 2026</span>
-                        <h3>Software Engineer • Atreyus LLC (Remote)</h3>
+                <article class="timeline-item tilt-card reveal">
+                    <div class="timeline-left">
+                        <div class="timeline-badge"><i class="bx bx-brain"></i></div>
+                        <div class="timeline-line"></div>
                     </div>
-                    <ul>
-                        <li>Built an agentic vector-store pipeline for a production RAG system, reaching 93% chunk-level retrieval accuracy with full eval coverage.</li>
-                        <li>Designed async job processing with ARQ and AWS ECR, improving throughput up to 20x and reducing end-to-end processing time.</li>
-                        <li>Improved model estimation accuracy by 10% with targeted prompt engineering and reduced retrieval output drift.</li>
-                        <li>Optimized embedding pipelines, producing a 9% accuracy gain and 3x faster processing speed.</li>
-                    </ul>
+                    <div class="timeline-body">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Jul 2025 – Jan 2026</span>
+                        </div>
+                        <h3>Software Engineer <span class="at">@</span> Atreyus LLC</h3>
+                        <ul>
+                            <li>Built an agentic vector-store pipeline for a production RAG system, reaching <strong>93%</strong> chunk-level retrieval accuracy with full eval coverage.</li>
+                            <li>Designed async job processing with ARQ and AWS ECR, improving throughput up to <strong>20x</strong> and reducing end-to-end processing time.</li>
+                            <li>Improved model estimation accuracy by <strong>10%</strong> with targeted prompt engineering and reduced retrieval output drift.</li>
+                            <li>Optimized embedding pipelines, producing a <strong>9%</strong> accuracy gain and <strong>3x</strong> faster processing speed.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>LangChain</span><span>RAG</span><span>ARQ</span><span>AWS ECR</span><span>Vector DB</span>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="timeline-item">
-                    <div class="timeline-meta">
-                        <span>Jun 2024 - Aug 2024</span>
-                        <h3>Software Engineer Intern • Flatirons AI (Remote)</h3>
+                <article class="timeline-item tilt-card reveal">
+                    <div class="timeline-left">
+                        <div class="timeline-badge"><i class="bx bx-data"></i></div>
                     </div>
-                    <ul>
-                        <li>Optimized Django REST APIs in a data ingestion pipeline, improving throughput by 30% through cloud-based async jobs.</li>
-                        <li>Integrated an LLM into a production chatbot for dynamic feedback-driven learning and improved contextual response quality.</li>
-                        <li>Refactored React frontend components to reduce latency and contributed to a 20% increase in positive feedback scores.</li>
-                    </ul>
+                    <div class="timeline-body">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Jun 2024 – Aug 2024</span>
+                        </div>
+                        <h3>Software Engineer Intern <span class="at">@</span> Flatirons AI</h3>
+                        <ul>
+                            <li>Optimized Django REST APIs in a data ingestion pipeline, improving throughput by <strong>30%</strong> through cloud-based async jobs.</li>
+                            <li>Integrated an LLM into a production chatbot for dynamic feedback-driven learning and improved contextual response quality.</li>
+                            <li>Refactored React frontend components to reduce latency, contributing to a <strong>20%</strong> increase in positive feedback scores.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Django</span><span>LLM</span><span>React</span><span>REST API</span>
+                        </div>
+                    </div>
                 </article>
             </div>
         </section>
 
+        <!-- ─── PROJECTS ─── -->
         <section class="section projects" id="projects">
-            <div class="section-heading">
-                <p>Portfolio</p>
+            <div class="section-heading reveal">
+                <p class="eyebrow">Portfolio</p>
                 <h2>Selected Projects</h2>
             </div>
             <div class="project-list">
-                <article class="project-item">
-                    <h3>
-                        Linguofy.ai
+                <article class="project-item tilt-card reveal">
+                    <div class="project-glow"></div>
+                    <div class="project-top">
+                        <div class="project-icon-wrap"><i class="bx bx-microphone"></i></div>
                         <a href="https://github.com/taiminhle4920" target="_blank" rel="noreferrer" class="github-link" aria-label="GitHub profile">
                             <i class="bx bxl-github"></i>
                         </a>
-                    </h3>
+                    </div>
+                    <h3>Linguofy.ai</h3>
                     <p class="project-description">
-                        Built a real-time transcription app with Faster-Whisper and a Gemini AI agent for auto-summarization.
-                        Achieved ~90% Q&A accuracy and reduced storage footprint by 40%.
+                        Real-time transcription app powered by Faster-Whisper and a Gemini AI agent for auto-summarization.
+                        Achieved <strong>~90% Q&amp;A accuracy</strong> and reduced storage footprint by <strong>40%</strong>.
                     </p>
-                    <p class="project-tech">Flask • React • Whisper • Faster-Whisper • Gemini • PostgreSQL</p>
+                    <div class="project-tech">
+                        <span>Flask</span><span>React</span><span>Whisper</span><span>Gemini</span><span>PostgreSQL</span>
+                    </div>
                 </article>
 
-                <article class="project-item">
-                    <h3>
-                        Pneumonia Detection
+                <article class="project-item tilt-card reveal">
+                    <div class="project-glow"></div>
+                    <div class="project-top">
+                        <div class="project-icon-wrap"><i class="bx bx-heart-circle"></i></div>
                         <a href="https://github.com/taiminhle4920/pneumonia-detection" target="_blank" rel="noreferrer" class="github-link" aria-label="Pneumonia Detection Repository">
                             <i class="bx bxl-github"></i>
                         </a>
-                    </h3>
+                    </div>
+                    <h3>Pneumonia Detection</h3>
                     <p class="project-description">
                         Trained CNN and Vision Transformer models on 5,000+ chest X-rays. Improved classification
-                        performance from 85% to 93.8% through architecture tuning and data augmentation.
+                        from <strong>85%</strong> to <strong>93.8%</strong> through architecture tuning and data augmentation.
                     </p>
-                    <p class="project-tech">PyTorch • TensorFlow • NumPy • Pandas • Matplotlib</p>
+                    <div class="project-tech">
+                        <span>PyTorch</span><span>TensorFlow</span><span>ViT</span><span>NumPy</span><span>Pandas</span>
+                    </div>
                 </article>
             </div>
         </section>
 
+        <!-- ─── SKILLS ─── -->
         <section class="section skills" id="skills">
-            <div class="section-heading">
-                <p>Toolbox</p>
+            <div class="section-heading reveal">
+                <p class="eyebrow">Toolbox</p>
                 <h2>Technical Skills</h2>
             </div>
             <div class="skills-grid">
-                <article class="skills-card">
-                    <h3>Languages</h3>
-                    <p>Python, JavaScript, TypeScript, Java, SQL</p>
-                </article>
-                <article class="skills-card">
-                    <h3>Frameworks</h3>
-                    <p>FastAPI, Django, Flask, Node.js, Express.js, React</p>
-                </article>
-                <article class="skills-card">
-                    <h3>AI / ML</h3>
-                    <p>LangChain, Hugging Face, PyTorch, TensorFlow, Whisper, RAG pipelines, prompt engineering</p>
-                </article>
-                <article class="skills-card">
-                    <h3>Infrastructure</h3>
-                    <p>AWS, Docker, Redis, PostgreSQL, MySQL, Vector Databases, Git, Linux</p>
-                </article>
+                <div class="skills-category reveal">
+                    <div class="skills-cat-header">
+                        <i class="bx bx-terminal"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                        <span>TypeScript</span>
+                        <span>Java</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+                <div class="skills-category reveal">
+                    <div class="skills-cat-header">
+                        <i class="bx bx-layer"></i>
+                        <h3>Frameworks</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>FastAPI</span>
+                        <span>Django</span>
+                        <span>Flask</span>
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>React</span>
+                    </div>
+                </div>
+                <div class="skills-category reveal">
+                    <div class="skills-cat-header">
+                        <i class="bx bx-brain"></i>
+                        <h3>AI / ML</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>LangChain</span>
+                        <span>Hugging Face</span>
+                        <span>PyTorch</span>
+                        <span>TensorFlow</span>
+                        <span>Whisper</span>
+                        <span>RAG</span>
+                        <span>Prompt Eng.</span>
+                    </div>
+                </div>
+                <div class="skills-category reveal">
+                    <div class="skills-cat-header">
+                        <i class="bx bx-cloud"></i>
+                        <h3>Infrastructure</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>AWS</span>
+                        <span>Docker</span>
+                        <span>Redis</span>
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                        <span>Vector DB</span>
+                        <span>Git</span>
+                        <span>Linux</span>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- ─── EDUCATION ─── -->
         <section class="section education" id="education">
-            <div class="section-heading">
-                <p>Academics</p>
+            <div class="section-heading reveal">
+                <p class="eyebrow">Academics</p>
                 <h2>Education</h2>
             </div>
             <div class="education-grid">
-                <article class="education-item">
-                    <span>May 2025</span>
+                <article class="education-item tilt-card reveal">
+                    <div class="edu-year">May 2025</div>
+                    <div class="edu-logo-wrap"><i class="bx bx-buildings"></i></div>
                     <h3>San Jose State University</h3>
-                    <p>Master of Science in Software Engineering (Data Science Specialization)</p>
+                    <p>Master of Science in Software Engineering</p>
+                    <span class="edu-spec">Data Science Specialization</span>
                 </article>
-                <article class="education-item">
-                    <span>Jun 2023</span>
-                    <h3>California Polytechnic State University, San Luis Obispo</h3>
+                <article class="education-item tilt-card reveal">
+                    <div class="edu-year">Jun 2023</div>
+                    <div class="edu-logo-wrap"><i class="bx bx-graduation"></i></div>
+                    <h3>Cal Poly San Luis Obispo</h3>
                     <p>Bachelor of Science in Computer Science</p>
+                    <span class="edu-spec"></span>
                 </article>
             </div>
         </section>
 
+        <!-- ─── CONTACT ─── -->
         <section class="section contact" id="contact">
-            <div class="section-heading">
-                <p>Contact</p>
-                <h2>Let's Build Something Impactful</h2>
-            </div>
-            <p class="contact-text">
-                Open to software engineering and AI engineering opportunities. Reach out and let's talk about products,
-                automation, and scalable ML systems.
-            </p>
-            <div class="cta-group">
-                <a href="mailto:vincentle4920@gmail.com" class="btn btn-primary">Email Me</a>
-                <a href="https://www.linkedin.com/in/vincentle4920/" target="_blank" rel="noreferrer" class="btn btn-secondary">LinkedIn</a>
+            <div class="contact-inner reveal">
+                <p class="eyebrow">Contact</p>
+                <h2>Let's Build Something<br><span class="gradient-text">Impactful Together</span></h2>
+                <p class="contact-text">
+                    Open to software engineering and AI engineering roles. I love talking about
+                    products, automation, and scalable ML systems — reach out anytime.
+                </p>
+                <div class="cta-group">
+                    <a href="mailto:vincentle4920@gmail.com" class="btn btn-primary">
+                        <i class="bx bx-envelope"></i> Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/vincentle4920/" target="_blank" rel="noreferrer" class="btn btn-secondary">
+                        <i class="bx bxl-linkedin"></i> LinkedIn
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>Minh Tai Le &copy; <span id="year"></span> • All Rights Reserved.</p>
+        <p>Designed &amp; built by <strong>Minh Tai Le</strong> &copy; <span id="year"></span></p>
     </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
