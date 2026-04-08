@@ -2,165 +2,213 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS link -->
+    <meta name="description" content="Minh Tai Le (Vincent) - Software Engineer portfolio and resume.">
     <link rel="stylesheet" href="style.css">
-    <!-- Icon link -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Vincent Le</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Minh Tai Le | Software Engineer</title>
 </head>
 <body>
-    <!-- Header Section -->
-
-
     <header class="header">
-        <a href="#" class="logo">Vincent Le</a>
-        <i class="bx bx-menu" id="menu-btn"></i>
-        <nav class="menu-bar">
-            <a href="#home">About</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experiences</a>
+        <a href="#home" class="logo">Minh Tai Le</a>
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation menu">
+            <i class="bx bx-menu"></i>
+        </button>
+        <nav class="menu-bar" id="menu-bar">
+            <a href="#home">Home</a>
+            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-
-    <!-- Home Section -->
-    <section class="home" id="home">
-        <div class="home-bio">
-            <h3>Hi! I am</h3>
-            <h1>Vincent Le</h1>
-            <h3>I am a <span class="animated-text">FullStack Developer</span></h3>
-            <p>I am a Master's student in Software Engineering at San Jose State University, specializing in Data Science. With a
-                strong foundation in machine learning, web development, and software architecture, I have worked on projects ranging
-                from developing CNN models for medical imaging to building full-stack applications. My experience as a Software
-                Engineer Intern at Flatirons AI has enhanced my skills in optimizing APIs, integrating advanced AI models, and
-                delivering user-friendly interfaces. I am passionate about applying innovative technologies to solve real-world
-                problems and look forward to connecting with you to explore potential opportunities.</p>
-
-            <p>Feel free to reach out to me via <a href="mailto:vincentle4920@gmail.com" class="contact-link">email</a> or connect with me on LinkedIn</p>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/vincentle4920/"><i class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/taiminhle4920"><i class="bx bxl-github"></i></a>
-            </div>
-            
-            <a href="assets/resume.pdf" download class="btn">Download Resume</a>
-        </div>
-        <div class="profile-pic">
-            <img src="assets/avatar.png" alt="">
-        </div>
-    </section>
-
-    <!-- Education Section -->
-<section class="education" id="education">
-    <div class="heading">
-        <h2>My <span>Education</span></h2>
-    </div>
-
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h2>Aug 2023 – Current</h2>
-                <h1>San Jose State University</h1>
-                <p class="education-degree">Master of Science in Software Engineering, Specialization in Data Science
+    <main>
+        <section class="hero section" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">San Jose, CA • IT Engineer</p>
+                <h1>Building practical AI and software systems that ship measurable impact.</h1>
+                <p class="hero-summary">
+                    I'm Minh Tai Le (Vincent), a software engineer focused on AI-powered products, backend systems,
+                    and scalable data workflows. I build high-impact tooling that improves speed, quality, and team productivity.
                 </p>
+                <p class="hero-role">Currently: <span class="animated-text">IT Engineer at AIC</span></p>
+                <div class="cta-group">
+                    <a href="assets/Minh_Tai_Le_Resume.pdf" class="btn btn-primary" download>Download Updated Resume</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                </div>
+                <div class="social-media">
+                    <a href="mailto:vincentle4920@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/vincentle4920/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/taiminhle4920" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                </div>
             </div>
-        </div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h2>Sep 2021 – Jun 2023</h2>
-                <h1>California Polytechnic State University, San Luis Obispo</h1>
-                <p class="education-degree">Bachelor of Science in Computer Science</p>
+            <div class="impact-grid">
+                <article class="impact-card">
+                    <h2>~60%</h2>
+                    <p>Reduced manual QC review time by building an internal Python inspection parser.</p>
+                </article>
+                <article class="impact-card">
+                    <h2>20x</h2>
+                    <p>Increased file-processing throughput using async job processing with ARQ and AWS ECR.</p>
+                </article>
+                <article class="impact-card">
+                    <h2>93%</h2>
+                    <p>Chunk-level retrieval accuracy delivered for a production RAG vector-store pipeline.</p>
+                </article>
             </div>
-        </div>
-    </div>
-</section>
-    <!-- Experiences Section -->
-<section class="experience" id="experience">
-    <div class="heading">
-        <h2>My <span>Experiences</span></h2>
-    </div>
+        </section>
 
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h2>June 2024 - August 2024</h2>
-                <h1>Software Engineer Intern - Flatirons AI</h1>
-                <p>
-                    - Redesigned frontend and optimized backend API, improving data ingestion by 30%.<br>
-                    - Integrated OpenAI’s ChatGPT-4 for enhanced chatbot capabilities.<br>
-                    - Improved chatbot UX with iterative development, increasing positive feedback by 20%.<br>
-                    <strong>Tech Stack:</strong> React.js, Django, SQLite, Microsoft Azure, Python, OpenAI GPT-4.
-                </p>
+        <section class="section experience" id="experience">
+            <div class="section-heading">
+                <p>Career</p>
+                <h2>Experience</h2>
             </div>
-        </div>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <span>Feb 2026 - Present</span>
+                        <h3>IT Engineer • AIC</h3>
+                    </div>
+                    <ul>
+                        <li>Developed an internal Python tool to parse part-inspection results, reducing manual QC review time by ~60% for 8 engineers.</li>
+                        <li>Built SQL-backed pipelines to consolidate multi-source inspection data, cutting report generation from hours to under 5 minutes.</li>
+                        <li>Automated repetitive Python workflows, removing roughly 3 hours of weekly manual effort across the team.</li>
+                    </ul>
+                </article>
 
-    </div>
-</section>
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <span>Jul 2025 - Jan 2026</span>
+                        <h3>Software Engineer • Atreyus LLC (Remote)</h3>
+                    </div>
+                    <ul>
+                        <li>Built an agentic vector-store pipeline for a production RAG system, reaching 93% chunk-level retrieval accuracy with full eval coverage.</li>
+                        <li>Designed async job processing with ARQ and AWS ECR, improving throughput up to 20x and reducing end-to-end processing time.</li>
+                        <li>Improved model estimation accuracy by 10% with targeted prompt engineering and reduced retrieval output drift.</li>
+                        <li>Optimized embedding pipelines, producing a 9% accuracy gain and 3x faster processing speed.</li>
+                    </ul>
+                </article>
 
+                <article class="timeline-item">
+                    <div class="timeline-meta">
+                        <span>Jun 2024 - Aug 2024</span>
+                        <h3>Software Engineer Intern • Flatirons AI (Remote)</h3>
+                    </div>
+                    <ul>
+                        <li>Optimized Django REST APIs in a data ingestion pipeline, improving throughput by 30% through cloud-based async jobs.</li>
+                        <li>Integrated an LLM into a production chatbot for dynamic feedback-driven learning and improved contextual response quality.</li>
+                        <li>Refactored React frontend components to reduce latency and contributed to a 20% increase in positive feedback scores.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
 
-    <!-- Projects Section -->
+        <section class="section projects" id="projects">
+            <div class="section-heading">
+                <p>Portfolio</p>
+                <h2>Selected Projects</h2>
+            </div>
+            <div class="project-list">
+                <article class="project-item">
+                    <h3>
+                        Linguofy.ai
+                        <a href="https://github.com/taiminhle4920" target="_blank" rel="noreferrer" class="github-link" aria-label="GitHub profile">
+                            <i class="bx bxl-github"></i>
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Built a real-time transcription app with Faster-Whisper and a Gemini AI agent for auto-summarization.
+                        Achieved ~90% Q&A accuracy and reduced storage footprint by 40%.
+                    </p>
+                    <p class="project-tech">Flask • React • Whisper • Faster-Whisper • Gemini • PostgreSQL</p>
+                </article>
 
-<section class="projects" id="projects">
-    <div class="heading">
-        <h2>My <span>Projects</span></h2>
-    </div>
+                <article class="project-item">
+                    <h3>
+                        Pneumonia Detection
+                        <a href="https://github.com/taiminhle4920/pneumonia-detection" target="_blank" rel="noreferrer" class="github-link" aria-label="Pneumonia Detection Repository">
+                            <i class="bx bxl-github"></i>
+                        </a>
+                    </h3>
+                    <p class="project-description">
+                        Trained CNN and Vision Transformer models on 5,000+ chest X-rays. Improved classification
+                        performance from 85% to 93.8% through architecture tuning and data augmentation.
+                    </p>
+                    <p class="project-tech">PyTorch • TensorFlow • NumPy • Pandas • Matplotlib</p>
+                </article>
+            </div>
+        </section>
 
-    <div class="project-list">
-        <div class="project-item">
-            <h3>JobFit
-                <a href="https://github.com/taiminhle4920/linkedfit" target="_blank" class="github-link">
-                    <i class='bx bxl-github'></i>
-                </a>
-            </h3>
-            <p class="project-description">Web application integrating Google Gemini and USAJobs APIs for personalized
-                job matching.</p>
-            <span class="project-tech"><strong>Tech Stack:</strong> Node.js, Express, Google Gemini API</span>
-        </div>
+        <section class="section skills" id="skills">
+            <div class="section-heading">
+                <p>Toolbox</p>
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <article class="skills-card">
+                    <h3>Languages</h3>
+                    <p>Python, JavaScript, TypeScript, Java, SQL</p>
+                </article>
+                <article class="skills-card">
+                    <h3>Frameworks</h3>
+                    <p>FastAPI, Django, Flask, Node.js, Express.js, React</p>
+                </article>
+                <article class="skills-card">
+                    <h3>AI / ML</h3>
+                    <p>LangChain, Hugging Face, PyTorch, TensorFlow, Whisper, RAG pipelines, prompt engineering</p>
+                </article>
+                <article class="skills-card">
+                    <h3>Infrastructure</h3>
+                    <p>AWS, Docker, Redis, PostgreSQL, MySQL, Vector Databases, Git, Linux</p>
+                </article>
+            </div>
+        </section>
 
-        <div class="project-item">
-            <h3>Pneumonia Detection
-                <a href="https://github.com/taiminhle4920/pneumonia-detection" target="_blank" class="github-link">
-                    <i class='bx bxl-github'></i>
-                </a>
-            </h3>
-            <p class="project-description">Developed CNN and ViT models to detect pneumonia from chest X-ray images with
-                93.8% accuracy.</p>
-            <span class="project-tech"><strong>Tech Stack:</strong> PyTorch, TensorFlow</span>
-        </div>
+        <section class="section education" id="education">
+            <div class="section-heading">
+                <p>Academics</p>
+                <h2>Education</h2>
+            </div>
+            <div class="education-grid">
+                <article class="education-item">
+                    <span>May 2025</span>
+                    <h3>San Jose State University</h3>
+                    <p>Master of Science in Software Engineering (Data Science Specialization)</p>
+                </article>
+                <article class="education-item">
+                    <span>Jun 2023</span>
+                    <h3>California Polytechnic State University, San Luis Obispo</h3>
+                    <p>Bachelor of Science in Computer Science</p>
+                </article>
+            </div>
+        </section>
 
-        <div class="project-item">
-            <h3>HrHub
-                <a href="https://github.com/taiminhle4920/HRHUB" target="_blank" class="github-link">
-                    <i class='bx bxl-github'></i>
-                </a>
-            </h3>
-            <p class="project-description">Full-stack HR portal with scalable infrastructure and automated CI/CD
-                pipelines.</p>
-            <span class="project-tech"><strong>Tech Stack:</strong> React.js, Node.js, MongoDB, AWS</span>
-        </div>
-    </div>
-</section>
-   
-    <!-- Footer Section -->
+        <section class="section contact" id="contact">
+            <div class="section-heading">
+                <p>Contact</p>
+                <h2>Let's Build Something Impactful</h2>
+            </div>
+            <p class="contact-text">
+                Open to software engineering and AI engineering opportunities. Reach out and let's talk about products,
+                automation, and scalable ML systems.
+            </p>
+            <div class="cta-group">
+                <a href="mailto:vincentle4920@gmail.com" class="btn btn-primary">Email Me</a>
+                <a href="https://www.linkedin.com/in/vincentle4920/" target="_blank" rel="noreferrer" class="btn btn-secondary">LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <hr>
-        <p>Vincent Le &copy; <span id="year"></span>
-            <br>All Rights Reserved.
-        </p>
+        <p>Minh Tai Le &copy; <span id="year"></span> • All Rights Reserved.</p>
     </footer>
 
-    <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- Typing Animation -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <!-- JS Script -->
     <script src="script.js"></script>
-    
 </body>
 </html>
