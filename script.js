@@ -1,40 +1,83 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
+const menuBtn = document.getElementById("menu-btn");
+const menuBar = document.getElementById("menu-bar");
+const menuIcon = menuBtn?.querySelector("i");
+const navLinks = document.querySelectorAll(".menu-bar a");
 
-// Activate Menu Button //
-let menuBtn = document.querySelector('#menu-btn');
-let menuBar = document.querySelector('.menu-bar');
-menuBtn.onclick = () =>{
-    menuBtn.classList.toggle('bx-x');
-    menuBar.classList.toggle('active');
+if (menuBtn && menuBar) {
+    menuBtn.addEventListener("click", () => {
+        menuBar.classList.toggle("active");
+        if (menuIcon) {
+            menuIcon.classList.toggle("bx-menu");
+            menuIcon.classList.toggle("bx-x");
+        }
+    });
 }
 
-// Remove menu bar on scrolls //
-
-window.onscroll = () => {
-    menuBtn.classList.remove('bx-x');
-    menuBar.classList.remove('active');
-}
-
-//Scroll Reveal //
-ScrollReveal({
-    reset: true,
-    distance: '100px',
-    duration: 2000,
-    delay: 200
-})
-ScrollReveal().reveal('.home-bio h1', {origin: 'left'});
-ScrollReveal().reveal('.home-bio p', {origin: 'right'});
-ScrollReveal().reveal('.home-bio, heading', {origin: 'top'});
-ScrollReveal().reveal('.profile-pic, .skills-items, .project-items, .form', {origin: 'bottom'});
-
-// Typing Animation //
-const animatedText = new Typed('.animated-text', {
-    strings: ["Full-stack Software Engineer", "Machine Learning Engineer"],
-    backSpeed: 50,
-    typeSpeed:50,
-    backDelay: 1000, 
-    loop: true,
-
-
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        menuBar.classList.remove("active");
+        if (menuIcon) {
+            menuIcon.classList.add("bx-menu");
+            menuIcon.classList.remove("bx-x");
+        }
+    });
 });
+
+window.addEventListener("scroll", () => {
+    menuBar.classList.remove("active");
+    if (menuIcon) {
+        menuIcon.classList.add("bx-menu");
+        menuIcon.classList.remove("bx-x");
+    }
+});
+
+const sections = document.querySelectorAll("main section[id]");
+function setActiveNavOnScroll() {
+    const scrollY = window.scrollY + 120;
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const id = section.getAttribute("id");
+        const navLink = document.querySelector(`.menu-bar a[href="#${id}"]`);
+        if (!navLink) return;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            navLink.classList.add("active");
+        } else {
+            navLink.classList.remove("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", setActiveNavOnScroll);
+setActiveNavOnScroll();
+
+if (window.ScrollReveal) {
+    ScrollReveal({
+        distance: "40px",
+        duration: 900,
+        delay: 120,
+        easing: "ease-out",
+        reset: false
+    });
+    ScrollReveal().reveal(".hero-content, .section-heading", { origin: "top" });
+    ScrollReveal().reveal(".impact-card, .timeline-item, .project-item, .skills-card, .education-item", {
+        origin: "bottom",
+        interval: 80
+    });
+}
+
+if (window.Typed) {
+    new Typed(".animated-text", {
+        strings: [
+            "IT Engineer at AIC",
+            "Software Engineer",
+            "AI & Data Workflow Builder"
+        ],
+        typeSpeed: 45,
+        backSpeed: 28,
+        backDelay: 1300,
+        loop: true
+    });
+}
